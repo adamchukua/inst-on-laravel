@@ -8,16 +8,16 @@
         </div>
         <div class="col-9 pt-5">
             <div class="div">
-                <h1>thegradle</h1>
+                <h1>{{ $user->username }}</h1>
             </div>
             <div class="d-flex">
                 <div class="pe-5"><strong>2</strong> posts</div>
                 <div class="pe-5"><strong>15</strong> followers</div>
                 <div class="pe-5"><strong>23</strong> following</div>
             </div>
-            <div class="pt-4 fw-bolder">Ivan Adamchuk</div>
-            <div>Glory to Ukraine!</div>
-            <div><a href="#">thegradle.github.io</a></div>
+            <div class="pt-4 fw-bolder">{{ $user->profile->title }}</div>
+            <div>{{ $user->profile->description }}</div>
+            <div><a href="#">{{ $user->profile->url }}</a></div>
         </div>
     </div>
 
