@@ -34,12 +34,13 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav me-auto">
-
+                        
                     </ul>
 
                     <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ms-auto">
+                    <ul class="navbar-nav ms-auto align-items-center">
                         <!-- Authentication Links -->
+                        <li class="pe-3"><a href="/p/create"><img src="/img/svg/add-plus.svg" alt="" style="width: 25px" title="Add new post"></a></li>
                         @guest
                             @if (Route::has('login'))
                                 <li class="nav-item">
