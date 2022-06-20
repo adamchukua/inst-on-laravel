@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row">
         <div class="col-3 p-5">
-            <img src="https://workmacro.com/wp-content/uploads/2018/02/1-by-1-1024x1024.png" alt="" class="rounded-circle avatar ">
+            <img src="/storage/{{ $user->profile->image }}" alt="" class="rounded-circle avatar ">
         </div>
         <div class="col-9 pt-5">
             <div class="div d-flex align-items-center">
