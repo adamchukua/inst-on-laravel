@@ -7,8 +7,11 @@
             <img src="https://workmacro.com/wp-content/uploads/2018/02/1-by-1-1024x1024.png" alt="" class="rounded-circle avatar ">
         </div>
         <div class="col-9 pt-5">
-            <div class="div">
+            <div class="div d-flex align-items-center">
                 <h1>{{ $user->username }}</h1>
+                @can('update', $user->profile)
+                    <a href="/profile/{{ $user->id }}/edit"><button class="btn btn-primary ms-3">Edit Profile</button></a>
+                @endcan
             </div>
             <div class="d-flex">
                 <div class="pe-5"><strong>{{ $user->posts->count() }}</strong> posts</div>
