@@ -13,9 +13,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [App\Http\Controllers\PostsController::class, 'index']);
-
 Auth::routes();
+
+Route::get('/email', function () {
+    return new \App\Mail\WelcomeMail();
+});
+
+Route::get('/', [App\Http\Controllers\PostsController::class, 'index']);
 
 Route::get('/profile/{user}', [App\Http\Controllers\ProfilesController::class, 'index'])->name('profile.show');
 Route::get('/profile/{user}/edit', [App\Http\Controllers\ProfilesController::class, 'edit'])->name('profile.edit');
