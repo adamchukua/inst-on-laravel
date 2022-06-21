@@ -7,8 +7,11 @@
             <img src="{{ $user->profile->profileImage() }}" alt="" class="rounded-circle avatar ">
         </div>
         <div class="col-9 pt-5">
-            <div class="div d-flex align-items-center">
+            <div class="d-flex align-items-center pb-3">
                 <h1>{{ $user->username }}</h1>
+
+                <follow-button user-id="{{ $user->id }}" follows="{{ $follows }}"></follow-button>
+
                 @can('update', $user->profile)
                     <a href="/profile/{{ $user->id }}/edit"><button class="btn btn-primary ms-3">Edit Profile</button></a>
                 @endcan
