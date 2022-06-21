@@ -16,5 +16,11 @@
     @empty
         There aren't posts from your followings...
     @endforelse
+
+    <div class="row">
+        <div class="col-12 d-flex justify-content-center">
+            {{ $posts->links() }}
+        </div>
+    </div>
 </div>
 @endsection
