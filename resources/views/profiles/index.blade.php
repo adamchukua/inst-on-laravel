@@ -19,9 +19,9 @@
                 @endcan
             </div>
             <div class="d-flex">
-                <div class="pe-5"><strong>{{ $user->posts->count() }}</strong> posts</div>
-                <div class="pe-5"><strong>{{ $user->profile->followers->count() }}</strong> followers</div>
-                <div class="pe-5"><strong>{{ $user->following->count() }}</strong> following</div>
+                <div class="pe-5"><strong>{{ $postCount }}</strong> posts</div>
+                <div class="pe-5"><strong>{{ $followersCount }}</strong> followers</div>
+                <div class="pe-5"><strong>{{ $followingCount }}</strong> following</div>
             </div>
             <div class="pt-4 fw-bolder">{{ $user->profile->title }}</div>
             <div>{{ $user->profile->description }}</div>
