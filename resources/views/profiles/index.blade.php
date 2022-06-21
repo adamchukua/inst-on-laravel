@@ -10,7 +10,9 @@
             <div class="d-flex align-items-center pb-3">
                 <h1>{{ $user->username }}</h1>
 
-                <follow-button user-id="{{ $user->id }}" follows="{{ $follows }}"></follow-button>
+                @if(auth()->user()->id != $user->id)
+                    <follow-button user-id="{{ $user->id }}" follows="{{ $follows }}"></follow-button>
+                @endif
 
                 @can('update', $user->profile)
                     <a href="/profile/{{ $user->id }}/edit"><button class="btn btn-primary ms-3">Edit Profile</button></a>
